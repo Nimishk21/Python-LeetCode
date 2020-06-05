@@ -1,3 +1,4 @@
+#method 1:
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         n=len(digits)-1
@@ -11,3 +12,7 @@ class Solution:
         if n==-1:
           digits=[1]+digits
           return digits
+#method 2:
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        return list(str(int("".join(str(v) for v in digits))+1))
