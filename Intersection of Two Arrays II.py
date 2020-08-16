@@ -15,7 +15,6 @@ class Solution:
         a=[]
         for i in nums1:
             if i in nums2:
-                nums2.remove(i)
                 a.append(i)
-        return a
+        return set(a)
 
