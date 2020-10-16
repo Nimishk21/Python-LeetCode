@@ -22,3 +22,24 @@ class Solution:
             return 0
         else:
             return a
+ #method 3:
+class Solution:
+    def reverse(self, x: int) -> int:
+        rev_num=0
+        if x>0:
+            while(x>0):
+                rem=x%10
+                rev_num=rev_num*10+rem
+                x=x//10
+        else:
+            x=abs(x)
+            while(x>0):
+                rem=x%10
+                rev_num=rev_num*10+rem
+                x=x//10
+            rev_num*=-1
+            
+        if rev_num in range(-2**31,2**31):
+            return rev_num
+        else:
+            return 0
